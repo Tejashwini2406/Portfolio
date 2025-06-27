@@ -1,6 +1,6 @@
 # Tejashwini S Uranakar | Portfolio
 
-Hi! I'm Tejashwini, a second-year Information Science student. This is my personal design and software portfolio, built from scratch with a night-in-the-mountains inspired theme.
+Hi! I'm Tejashwini, a second-year Information Science student. This is my personal design portfolio..
 
 ## 🌸 About
 A showcase of my journey, skills, and projects in tech and design. I love blending creativity with code!
