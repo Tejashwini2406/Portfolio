@@ -1,0 +1,384 @@
+/* Glassmorphism + Video Game UI Style */
+:root {
+  --white: #fff;
+  --soft-pink: #ffe0f0;
+  --neon-pink: #ffb3de;
+  --lavender: #ede6fa;
+  --pale-green: #e6f9f2;
+  --deep-blue: #181f3a;
+  --deep-purple: #2a1746;
+  --accent-teal: #3ed6c5;
+  --accent-pink: #ff4fa3; /* changed from #ff6ec7 to a more vibrant pink */
+  --text-light: #f8f8ff;
+  --text-dark: #181f3a;
+  --glass-bg: rgba(24, 31, 58, 0.55); /* deep blue glass */
+  --glass-bg-strong: rgba(42, 23, 70, 0.75); /* deep purple glass */
+  --glass-border: rgba(255,255,255,0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(24, 31, 58, 0.25);
+  --pixel-border: 4px solid var(--accent-pink);
+  --pixel-radius: 18px;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pixelify Sans', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: var(--text-light);
+  background: url('bg.png') center center fixed, linear-gradient(135deg, #181f3a 60%, #2a1746 100%);
+  background-size: cover, auto;
+  background-attachment: fixed;
+  text-shadow: 0 2px 8px rgba(24, 31, 58, 0.25);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  padding-top: 8.5rem; /* add space for fixed header */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header and navigation */
+header {
+  background: rgba(24, 31, 58, 0.38); /* more transparent glass */
+  box-shadow: 0 4px 24px 0 rgba(42, 23, 70, 0.18);
+  border-bottom: 1.5px solid var(--accent-pink);
+  border-radius: 2.5em 2.5em 2.5em 2.5em;
+  color: var(--accent-pink);
+  text-shadow: 0 2px 8px var(--deep-blue);
+  padding: 1.2rem 2rem 0.7rem 2rem;
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  transition: background 0.3s, box-shadow 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  gap: 2.5rem;
+  border-radius: 2.5em 2.5em 2.5em 2.5em;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+  flex: 1 1 auto;
+}
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  filter: drop-shadow(0 2px 8px var(--soft-pink));
+}
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--accent-pink);
+  background: none;
+  border: none;
+  text-shadow: 0 2px 12px var(--deep-purple), 0 0 2px var(--accent-pink);
+  padding: 0;
+  margin-left: 0.5rem;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline;
+  cursor: default;
+}
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-menu a {
+  background: rgba(42, 23, 70, 0.32);
+  box-shadow: 0 2px 12px var(--deep-blue);
+  border: 2px solid var(--accent-pink);
+  color: var(--text-light);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.6em 1.5em;
+  border-radius: 18px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.pixel-border {
+  display: inline-block;
+  border: var(--pixel-border);
+  border-radius: var(--pixel-radius);
+  background: var(--deep-blue);
+  color: var(--white);
+  box-shadow: 0 2px 8px var(--deep-purple);
+  padding: 0.2em 0.8em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.nav-menu a:hover {
+  background: var(--accent-pink);
+  color: var(--deep-blue);
+  box-shadow: 0 0 16px var(--accent-pink);
+}
+.nav-menu a:hover .pixel-border {
+  background: var(--accent-pink);
+  color: var(--deep-blue);
+  box-shadow: 0 0 16px var(--accent-pink);
+}
+
+/* Modern, glassy nav button styles */
+.nav-btn {
+  background: linear-gradient(135deg, #232a4d 70%, #3a1746 100%);
+  color: var(--soft-pink);
+  font-family: 'Pixelify Sans', 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1.5em;
+  box-shadow: 0 4px 24px 0 #1a1e3a99, 0 1.5px 8px 0 #3ed6c5;
+  padding: 0.7em 2.2em;
+  margin: 1.2em 1.2em 1.2em 0;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  outline: none;
+  cursor: pointer;
+  border: 1.5px solid var(--accent-pink);
+  backdrop-filter: blur(8px) saturate(160%);
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  background: linear-gradient(135deg, #3a1746 60%, #232a4d 100%);
+  color: var(--accent-teal);
+  box-shadow: 0 0 24px 4px var(--accent-pink), 0 4px 32px 0 #2a1746;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Container for nav buttons */
+.nav-btn-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 2em 0;
+}
+
+/* Sections */
+.section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem 2rem;
+  background: var(--glass-bg);
+  color: var(--text-light);
+  border: 1.5px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--pixel-radius);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+}
+.section h1, h2 {
+  color: var(--accent-pink);
+  margin-bottom: 1.2rem;
+  font-size: 2.2rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  text-shadow: 0 2px 8px var(--deep-blue);
+  letter-spacing: 2px;
+}
+
+/* Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: var(--midnight);
+  border-radius: 0.8rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 12px rgba(62, 32, 109, 0.12);
+  color: var(--text-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(62, 214, 203, 0.15);
+}
+
+/* Organized Projects and Designs Lists */
+.projects-list, .designs-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.2rem 2.2rem;
+  list-style: none;
+  justify-content: center;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+.projects-list li, .designs-list li {
+  margin: 0;
+  flex: 1 1 260px;
+  max-width: 260px;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  list-style: none;
+  justify-content: center;
+}
+.skills-list li {
+  background: var(--pale-green);
+  border: 2.5px solid var(--lavender);
+  color: var(--text-dark);
+  padding: 0.7rem 1.5rem;
+  border-radius: var(--pixel-radius);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 700;
+  box-shadow: var(--glass-shadow);
+  text-shadow: 0 1px 4px var(--white);
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--midnight);
+  color: var(--text-light);
+  font-size: 1rem;
+  resize: none;
+}
+.contact-form button {
+  background: var(--accent-teal);
+  color: var(--deep-blue);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-optical-sizing: auto;
+}
+.contact-form button:hover {
+  background: var(--accent-pink);
+  color: var(--text-light);
+}
+
+/* GitHub button */
+.github-btn {
+  background: var(--soft-pink);
+  color: var(--text-dark);
+  border: var(--pixel-border);
+  border-radius: var(--pixel-radius);
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: var(--glass-shadow);
+  padding: 0.8rem 1.2rem;
+  margin: 0.3rem 0.5rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-shadow: 0 1px 4px var(--white);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 2.2rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 230, 0.18);
+}
+.github-btn:hover {
+  background: var(--neon-pink);
+  color: var(--white);
+  box-shadow: 0 0 16px var(--neon-pink);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  color: var(--accent-pink);
+  font-size: 1rem;
+  background: linear-gradient(135deg, #232a4d 60%, #3a1746 100%);
+  border-top: 3px solid var(--accent-pink);
+  border-radius: 2.5em 2.5em 0 0;
+  box-shadow: 0 -4px 32px 0 #2a1746, 0 0px 16px 0 #ff4fa3;
+  text-shadow: 0 2px 8px #181f3a;
+  position: relative;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 700;
+  box-shadow: var(--glass-shadow);
+}
+footer a[href*="leetcode"] {
+  position: absolute;
+  right: 2.5rem;
+  bottom: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--accent-pink);
+  opacity: 1;
+  text-decoration: underline;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background: rgba(24,31,58,0.12);
+  padding: 0.2em 0.8em;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px #181f3a33;
+  transition: color 0.2s, background 0.2s;
+  z-index: 2;
+}
+footer a[href*="leetcode"]:hover {
+  color: #fff;
+  background: var(--accent-pink);
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .section {
+    padding: 1rem;
+  }
+}
+
+/* Optional: Animate background position for a more dynamic parallax */
+@media (pointer: fine) {
+  html, body {
+    scroll-behavior: smooth;
+  }
+  body {
+    will-change: background-position;
+  }
+}
