@@ -1,18 +1,27 @@
-# Tejashwini S Uranakar - Deployable Portfolio
+# Tejashwini S Uranakar | Portfolio
 
-A personal, deployable portfolio website for Tejashwini S Uranakar, a second-year Information Science student. The design uses a color palette inspired by a night in the mountains.
+Hi! I'm Tejashwini, a second-year Information Science student. This is my personal design and software portfolio, built from scratch with a night-in-the-mountains inspired theme.
 
-## Features
-- About and Skills sections
-- Modern, responsive, and deployable design
-- Color palette: deep blues, purples, and subtle accent colors
+## 🌸 About
+A showcase of my journey, skills, and projects in tech and design. I love blending creativity with code!
 
-## Getting Started
-Open `index.html` in your browser to view the portfolio.
+## 🚀 Skills
+- HTML & CSS
+- JavaScript
+- Python
+- Java
+- UI/UX Design
+- Data Analysis
+- SQL, MariaDB, MongoDB
 
-## Deployment
-You can deploy this site on any static hosting service (e.g., GitHub Pages, Netlify, Vercel). Simply upload the files in this folder.
+## 🗂️ Projects
+Find my favorite software and design projects, with links to GitHub and Canva.
+
+## 📫 Contact
+- [GitHub](https://github.com/Tejashwini2406)
+- [LinkedIn](https://www.linkedin.com/in/tejashwini-s-uranakar-9b84482a0/)
+- [LeetCode](https://leetcode.com/u/Wini_2401/)
 
 ---
 
-*Created June 2025*
+Thanks for visiting! ✨
